@@ -1,21 +1,33 @@
 import { Injectable } from '@angular/core';
-import { User } from './user';
-
 import { HttpClient } from '@angular/common/http';
-import {Observable} from 'rxjs';
-import { map } from 'rxjs/operators';
+
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsersService {
 
-  // users: User[];
-  url = 'http://dummy.restapiexample.com/api/v1/employees';
+  private data: User[] = [
+    {id: 1, name: 'Steewe'},
+    {id: 2, name: 'Steewe'},
+    {id: 3, name: 'Steewe'},
+    {id: 4, name: 'Steewe'}
+  ];
 
-  constructor(private http: HttpClient) { }
+  getData(): User[] {
 
-  public get(url: string): Observable<any> {
-    return this.http.get(url);
+    return this.data;
   }
+
+  addData(id: any, name: string) {
+
+    this.data.push(new User(id, name));
+
+  }
+
+
+  constructor() { }
+
 }
