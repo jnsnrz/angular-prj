@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -16,6 +17,8 @@ import { AddPostComponent } from './add-post/add-post.component';
 import { RecentPostsComponent } from './recent-posts/recent-posts.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +31,15 @@ import { HttpClientModule } from '@angular/common/http';
     PostsComponent,
     AsideComponent,
     AddPostComponent,
-    RecentPostsComponent
+    RecentPostsComponent,
+    UserComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

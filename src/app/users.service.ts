@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+//import { HttpClient } from '@angular/common/http';
 
-import { User } from './user';
+import { User } from './user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,22 +11,22 @@ import { User } from './user';
 export class UsersService {
 
   private data: User[] = [
-    {id: 1, name: 'Steewe'},
-    {id: 2, name: 'Steewe'},
-    {id: 3, name: 'Steewe'},
-    {id: 4, name: 'Steewe'}
+    {id: 1, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
+    {id: 2, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
+    {id: 3, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
+    {id: 4, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
   ];
 
-  getData(): User[] {
+  // getData(): Observable<User[]> {
 
-    return this.data;
-  }
+  //   return of(this.data);
+  // }
 
-  addData(id: any, name: string) {
+  // addData(id: any, name: string): void {
 
-    this.data.push(new User(id, name));
+  //   this.data.push(new User(id, name, imgPath));
 
-  }
+  // }
 
 
   constructor() { }
