@@ -1,0 +1,29 @@
+<form>
+  <fieldset>
+    <legend>Add item to your TO DO LIST:</legend>
+    <input type="text" id="todo-item" name="todo-item">
+    <button>Add item</button>
+  </fieldset>
+</form>
+
+<h2>List of your to do items</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Temp</th>
+      <th scope="col">Temp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <app-to-do-item *ngFor="let item of items"></app-to-do-item>
+  </tbody>
+</table>
