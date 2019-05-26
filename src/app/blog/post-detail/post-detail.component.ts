@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { element } from '@angular/core/src/render3';
-import { Post } from '../post.model';
+import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'app-post-detail',

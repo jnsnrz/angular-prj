@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-// import { UsersService } from '../users.service';
-import { User } from '../user.model';
+
+import { UsersService } from '../services/users.service';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-users',
@@ -15,25 +16,20 @@ export class UsersComponent implements OnInit {
   isDisabled = false;
   input = '';
 
-  users: User[] = [
-    {id: 1, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
-    {id: 2, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg'},
-    {id: 3, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg'},
-    {id: 4, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
-  ];
+  users: User[];
+
+  temp: any;
 
 
-  // constructor(private items: UsersService) { 
+  constructor(users: UsersService) { 
 
-  constructor() { 
-
-    // setTimeout(() => {
-    //   this.isDisabled = true;
-    // }, 2000);
+    this.temp = users.list();
 
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    console.log(this.temp);
+  }
 
   getTitle(): string {
     return this.title;
