@@ -1,7 +1,17 @@
+
+<div *ngIf="posts.length > 0; else noPosts">
+
 <app-post-detail
   class="umbotron text-center hoverable p-4"
   *ngFor="let post of posts"
   [item]="post"
-
 ></app-post-detail>
+
+</div>
+
+
+<ng-template #noPosts>
+  <p>{{ emptyTitle }}</p>
+</ng-template>
+
 
