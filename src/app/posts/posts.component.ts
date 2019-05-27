@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Post } from '../post.model';
 
 @Component({
@@ -7,6 +8,8 @@ import { Post } from '../post.model';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
+
+  emptyTitle = 'No posts provided';
 
   posts: Post[] = [
     {title: 'Post 1', text: 'this is the text of post 1'},
@@ -19,7 +22,6 @@ export class PostsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

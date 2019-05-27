@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-//import { HttpClient } from '@angular/common/http';
 
 import { User } from './user.model';
 
@@ -10,24 +8,62 @@ import { User } from './user.model';
 
 export class UsersService {
 
-  private data: User[] = [
-    {id: 1, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
-    {id: 2, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
-    {id: 3, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
-    {id: 4, name: 'Steewe', imgPath: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'},
-  ];
+  private _data: Array<User> = [
 
-  // getData(): Observable<User[]> {
+    {
+      id: 1,
+      email: 'george.bluth@reqres.in',
+      first_name: 'George',
+      last_name: 'Bluth',
+      avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg'
+    },
 
-  //   return of(this.data);
-  // }
+    {
+      id: 2,
+      email: 'anet.weaver@reqres.in',
+      first_name: 'Janet',
+      last_name: 'Weaver',
+      avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg'
+    },
 
-  // addData(id: any, name: string): void {
+    {
+      id: 3,
+      email: 'emma.wong@reqres.in',
+      first_name: 'Emma',
+      last_name: 'Wong',
+      avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg'
+  },
 
-  //   this.data.push(new User(id, name, imgPath));
+    { id: 4,
+      email: 'eve.holt@reqres.in',
+      first_name: 'Eve',
+      last_name: 'Holt',
+      avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg'
+    },
+    {
+      id: 5,
+      email: 'charles.morris@reqres.in',
+      first_name: 'Charles',
+      last_name: 'Morris',
+      avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg'
+    },
 
-  // }
+    { id: 6,
+      email: 'tracey.ramos@reqres.in',
+      first_name: 'Tracey',
+      last_name: 'Ramos',
+      avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg'
+    }
 
+   ];
+
+   get data() {
+     return this._data;
+   }
+
+   set data(data) {
+     this._data = data;
+   }
 
   constructor() { }
 

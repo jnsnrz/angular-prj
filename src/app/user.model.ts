@@ -1,15 +1,19 @@
 export class User {
+
+    static _id = 0;
+
     public id: number;
-    public name: string;
-    public imgPath: string;
+    public email: string;
+    public first_name: string;
+    public last_name: string;
+    public avatar: string;
 
-    // sallary: any;
-    // age: number;
-    // image: string;
-
-    constructor(id: number, name: string, imgPath: string) { 
+    constructor(id: number,  email: string, first_name: string, last_name: string, avatar: string) {
         this.id = id;
-        this.name = name;
-        this.imgPath = imgPath;
+        // this.id = User._id++;
+        this.email = email;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.avatar = avatar;
     }
 }

@@ -19,6 +19,11 @@ import { RecentPostsComponent } from './recent-posts/recent-posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './user/user.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { ToDoListComponent } from './toDo/to-do-list/to-do-list.component';
+import { ToDoItemComponent } from './toDo/to-do-item/to-do-item.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { UsersService } from './users.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     AddPostComponent,
     RecentPostsComponent,
     UserComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    ToDoListComponent,
+    ToDoItemComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +49,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
