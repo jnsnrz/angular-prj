@@ -3,10 +3,12 @@ import { Routes, RouterModule, ActivatedRoute, Params } from '@angular/router';
 
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
-import { PostsComponent } from './posts/posts.component';
-import { AddPostComponent } from './add-post/add-post.component';
+
 import { ToDoListComponent } from './toDo/to-do-list/to-do-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { PostsComponent } from './blog/posts/posts.component';
+import { AddPostComponent } from './blog/add-post/add-post.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

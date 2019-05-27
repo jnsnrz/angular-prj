@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
-import { UsersService } from '../users.service';
-import { User } from '../user.model';
+import { UsersService } from '../services/users.service';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-users',
@@ -9,18 +9,24 @@ import { User } from '../user.model';
   styleUrls: ['./users.component.scss']
 
 })
+
 export class UsersComponent implements OnInit {
 
-  title = 'List of users';
-  emptyTitle = 'No users provided';
+  title = 'Users title';
+  clickStatus = 'Not clicked';
+  isDisabled = false;
+  input = '';
 
-  //users: User[] = [
-  users: Array<User> = [ ];
+  users: any;
 
-  constructor(private usersService: UsersService) {
-    this.users = this.usersService.data;
+  temp: any;
+
+   constructor(private usersService: UsersService) {
+    this.users = this.usersService.list();
+   }
+
+  ngOnInit() { 
+    console.log(this.temp);
   }
-
-  ngOnInit() { }
 
 }
