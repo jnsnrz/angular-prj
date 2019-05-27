@@ -21,14 +21,16 @@ export class UsersComponent implements OnInit {
   temp: any;
 
 
-  constructor(users: UsersService) { 
+  constructor(private usersService: UsersService) { 
 
-    this.temp = users.list();
-
+  
   }
 
   ngOnInit() { 
+
+    this.usersService.list().subscribe(data => this.temp=data);
     console.log(this.temp);
+
   }
 
   getTitle(): string {

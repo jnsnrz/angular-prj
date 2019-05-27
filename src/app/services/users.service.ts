@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-// import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 import { User } from '../models/user.model';
 
@@ -35,7 +35,8 @@ export class UsersService {
 
    }
 
-   list() {
+   list(): Observable<any>{
+     console.log(Observable);
     return this.http.get(this.url);
   }
 
