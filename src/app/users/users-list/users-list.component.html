@@ -1,29 +1,29 @@
 <div class="container">
 
-<!-- <ng-template #noUsers>
+<ng-template #noUsers>
     <div class="row">
         <div class="users-title">
           <h1>{{ emptyTitle }}</h1>
         </div>
       </div>
-</ng-template> -->
+</ng-template>
 
-<!-- <div class="users-container" *ngIf="users.length > 0; else noUsers"> -->
+<div class="users-container" *ngIf="users.length > 0; else noUsers">
   
-  <!-- <div class="row">
+  <div class="row">
     <div class="users-title">
       <h1>{{ title }}</h1>
     </div>
-  </div> -->
+  </div>
 
   <div class="row">
 <!-- USERS LIST -->
-      <!-- <app-user
+      <app-user
       class="col-4 users-item" 
       *ngFor="let u of users; let i = index;"
       [element]="u"
       (select)="selectItem($event)" 
-      ></app-user> -->
+      ></app-user>
 <!-- / USERS LIST -->
   </div>
 </div>

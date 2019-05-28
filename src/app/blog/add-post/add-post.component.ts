@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-post.component.html',

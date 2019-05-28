@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-// import { UsersService } from '../services/users.service';
-// import { User } from '../models/user.model';
+import { UsersService } from '../shared/services/users.service';
+import { User } from '../shared/models/user.model';
 
 @Component({
   selector: 'app-users',
@@ -19,18 +19,17 @@ export class UsersComponent implements OnInit {
 
   users: any;
 
-  temp: any;
 
-  constructor() {
-  //  constructor(private usersService: UsersService) {
-    //this.users = this.usersService.list();
+
+    constructor(private usersService: UsersService) {
+    this.users = this.usersService.list();
    }
 
 
   ngOnInit() { 
 
-    //this.usersService.list().subscribe(data => this.temp=data);
-    //console.log(this.temp);
+    this.usersService.list().subscribe(data => this.users = data);
+    console.log(this.users);
 
   }
 

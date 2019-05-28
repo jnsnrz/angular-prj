@@ -34,7 +34,7 @@ export class UsersService {
   constructor( private http: HttpClient) { }
 
    list(): Observable<any>{
-     console.log(Observable);
+     
     return this.http.get(this.url);
 
   }

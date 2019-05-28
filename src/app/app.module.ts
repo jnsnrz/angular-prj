@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
+import { AlertModule } from 'ngx-bootstrap';
+
 import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
@@ -25,7 +27,8 @@ import { ShopModule } from './shop/shop.module';
     BlogModule,
     ToDoModule,
     UsersModule,
-    ShopModule
+    ShopModule,
+    AlertModule.forRoot(),
   ],
   bootstrap: [AppComponent]
 })
