@@ -12,7 +12,6 @@ import { ToDoModule } from './toDo/to-do.module';
 import { UsersModule } from './users/users.module';
 import { ShopModule } from './shop/shop.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
