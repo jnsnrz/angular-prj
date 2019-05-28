@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-import { UsersService } from '../services/users.service';
-import { User } from '../models/user.model';
+// import { UsersService } from '../services/users.service';
+// import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+  templateUrl: './users-list.component.html',
+  styleUrls: ['./users-list.component.scss']
 
 })
 
@@ -21,15 +21,16 @@ export class UsersComponent implements OnInit {
 
   temp: any;
 
-   constructor(private usersService: UsersService) {
-    this.users = this.usersService.list();
+  constructor() {
+  //  constructor(private usersService: UsersService) {
+    //this.users = this.usersService.list();
    }
 
 
   ngOnInit() { 
 
-    this.usersService.list().subscribe(data => this.temp=data);
-    console.log(this.temp);
+    //this.usersService.list().subscribe(data => this.temp=data);
+    //console.log(this.temp);
 
   }
 

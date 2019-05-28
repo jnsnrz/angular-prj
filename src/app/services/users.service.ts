@@ -1,9 +1,4 @@
 import { Injectable } from '@angular/core';
-
-<<<<<<< HEAD
-=======
-import { Observable, of } from 'rxjs';
->>>>>>> a5b4eeccd8651b13868d10a1fc4a67ae8f58d4f1
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -36,9 +31,7 @@ export class UsersService {
 
   url = 'https://reqres.in/api/users';
   
-  constructor( private http: HttpClient) {
-
-   }
+  constructor( private http: HttpClient) { }
 
    list(): Observable<any>{
      console.log(Observable);
