@@ -23,44 +23,10 @@
       class="col-4 users-item" 
       *ngFor="let u of users; let i = index;"
       [element]="u"
-      (select)="selectItem($event)" 
+      (click)="onSelect(u)" 
       ></app-user>
 <!-- / USERS LIST -->
   </div>
 </div>
 
-
-
-
-<!-- TEMPORARY -->
-  <!-- <div class="row">
-    <div class="col">
-      <div class="info-container">
-        <button 
-        class="btn btn-primary"
-        [disabled]="!isDisabled"
-        (click)="onClickFunc()" 
-        >Button</button>
-        <div *ngIf="isDisabled; else noInfo" class="info-container__info">
-          <p>{{ clickStatus }}</p>
-          <p>{{ input }}</p>
-          <input type="text" [(ngModel)]="title" (input)="onInputChange($event)">
-        </div>
-        <ng-template #noInfo>No info provided</ng-template>
-      </div>
-    </div>
-  </div> -->
-
-
-
-  <!-- <video #video id="myVideo" width="320" height="176">
-    <source src="mov_bbb.mp4" type="video/mp4">
-    <source src="mov_bbb.ogg" type="video/ogg">
-    Your browser does not support HTML5 video.
-  </video>
-  
-
-<button (click)="video.play()">PLAY</button> -->
-
-<!-- / TEMPORARY -->
   
