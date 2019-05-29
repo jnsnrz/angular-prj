@@ -23,6 +23,7 @@ import { ShopModule } from './shop/shop.module';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    HttpClientModule,
     CoreModule,
     BlogModule,
     ToDoModule,
