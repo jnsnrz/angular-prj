@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-user-detail',
@@ -10,17 +10,36 @@ export class UserDetailComponent implements OnInit {
 
   public userId;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
-  goToUsersList() {
+  ngOnInit() {
+    // read passed parameter in route
+    // let id = this.route.snapshot.paramMap.get('id');
+    // this.userId = id;
+
+    this.route.paramMap.subscribe((params: ParamMap) => {
+
+      let id = parseInt(params.get('id'));
+      this.userId = id;
+
+    });
+  }
+
+  goPrev() {
+    let prevId = this.userId - 1;
+    this.router.navigate(['/users', prevId]);
 
   }
 
-  ngOnInit() {
+  goNext() {
+    let nextId = this.userId + 1;
+    this.router.navigate(['/users', nextId]);
+  }
 
-    // read passed parameter in route
-    let id = this.route.snapshot.paramMap.get('id');
-    this.userId = id;
+  goToUsersList() {
+    let selectedId = this.userId ? this.userId : null;
+    this.router.navigate(['/users', { id: selectedId }]);
+
   }
 
 }
