@@ -16,4 +16,9 @@ export class ToDoListComponent implements OnInit {
   ngOnInit() {
   }
 
+  clicked(event) {
+      console.log(event.target.nextSibling);
+
+  }
+
 }
