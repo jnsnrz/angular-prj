@@ -1,65 +1,156 @@
-<div class="container">
+<div class="row">
 
-<ng-template #noUsers>
-    <div class="row">
-        <div class="users-title">
-          <h1>{{ emptyTitle }}</h1>
+
+  <div class="col-3">
+
+    <!-- Card -->
+    <div class="card">
+
+        <!-- Card image -->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
         </div>
-      </div>
-</ng-template>
-
-<div class="users-container" *ngIf="users.length > 0; else noUsers">
-  
-  <div class="row">
-    <div class="users-title">
-      <h1>{{ title }}</h1>
-    </div>
-  </div>
-
-  <div class="row">
-<!-- USERS LIST -->
-      <app-user
-      class="col-4 users-item" 
-      *ngFor="let u of users; let i = index;"
-      [element]="u"
-      (select)="selectItem($event)" 
-      ></app-user>
-<!-- / USERS LIST -->
-  </div>
-</div>
-
-
-
-
-<!-- TEMPORARY -->
-  <div class="row">
-    <div class="col">
-      <div class="info-container">
-        <button 
-        class="btn btn-primary"
-        [disabled]="!isDisabled"
-        (click)="onClickFunc()" 
-        >Button</button>
-        <div *ngIf="isDisabled; else noInfo" class="info-container__info">
-          <p>{{ clickStatus }}</p>
-          <p>{{ input }}</p>
-          <input type="text" [(ngModel)]="title" (input)="onInputChange($event)">
+      
+        <!-- Card content -->
+        <div class="card-body">
+      
+          <!-- Title -->
+          <h4 class="card-title">Card title</h4>
+          <!-- Text -->
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <!-- Button -->
+          <a href="#" class="btn btn-primary">Button</a>
+      
         </div>
-        <ng-template #noInfo>No info provided</ng-template>
+      
       </div>
+      <!-- Card -->
+
     </div>
-  </div>
 
 
+    <div class="col-3">
 
-  <!-- <video #video id="myVideo" width="320" height="176">
-    <source src="mov_bbb.mp4" type="video/mp4">
-    <source src="mov_bbb.ogg" type="video/ogg">
-    Your browser does not support HTML5 video.
-  </video>
-  
+        <!-- Card -->
+        <div class="card">
+    
+            <!-- Card image -->
+            <div class="view overlay">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <!-- Card content -->
+            <div class="card-body">
+          
+              <!-- Title -->
+              <h4 class="card-title">Card title</h4>
+              <!-- Text -->
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <!-- Button -->
+              <a href="#" class="btn btn-primary">Button</a>
+          
+            </div>
+          
+          </div>
+          <!-- Card -->
+    
+        </div>
 
-<button (click)="video.play()">PLAY</button> -->
 
-<!-- / TEMPORARY -->
-  
+        <div class="col-3">
+
+            <!-- Card -->
+            <div class="card">
+        
+                <!-- Card image -->
+                <div class="view overlay">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                  <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+              
+                <!-- Card content -->
+                <div class="card-body">
+              
+                  <!-- Title -->
+                  <h4 class="card-title">Card title</h4>
+                  <!-- Text -->
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <!-- Button -->
+                  <a href="#" class="btn btn-primary">Button</a>
+              
+                </div>
+              
+              </div>
+              <!-- Card -->
+        
+            </div>
+
+
+            <div class="col-3">
+
+                <!-- Card -->
+                <div class="card">
+            
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                  
+                    <!-- Card content -->
+                    <div class="card-body">
+                  
+                      <!-- Title -->
+                      <h4 class="card-title">Card title</h4>
+                      <!-- Text -->
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <!-- Button -->
+                      <a href="#" class="btn btn-primary">Button</a>
+                  
+                    </div>
+                  
+                  </div>
+                  <!-- Card -->
+            
+                </div>
+
+
+                <div class="col-3">
+
+                    <!-- Card -->
+                    <div class="card">
+                
+                        <!-- Card image -->
+                        <div class="view overlay">
+                          <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                          <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                          </a>
+                        </div>
+                      
+                        <!-- Card content -->
+                        <div class="card-body">
+                      
+                          <!-- Title -->
+                          <h4 class="card-title">Card title</h4>
+                          <!-- Text -->
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <!-- Button -->
+                          <a href="#" class="btn btn-primary">Button</a>
+                      
+                        </div>
+                      
+                      </div>
+                      <!-- Card -->
+                
+                    </div>
